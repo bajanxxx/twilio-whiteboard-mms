@@ -3,6 +3,8 @@ twilio-whiteboard-mms
 
 PHP-powered MMS-capable web-based whiteboard for Twilio
 
+This whiteboard runs in your web browsers and lets you draw pictures that you can then send to your phones using Twilio's MMS service.
+
 Set up is extremely simple:
 
 1. Rename `settings-default.php` to `settings.php`
