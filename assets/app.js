@@ -19,7 +19,7 @@ window.addEventListener('load',function(){
 
 	var iWidth = canvas.width;
 	var iHeight = canvas.height;
-
+	
 	context.fillStyle = "rgb(255,255,255)";
 	context.fillRect(0,0,iWidth,iHeight);
 /*
@@ -41,13 +41,15 @@ window.addEventListener('load',function(){
 	var drawer = {
 		isDrawing: false,
 		touchstart: function(coors){
+			var canvasOffset = $('#sketchpad').offset();
 			context.beginPath();
-			context.moveTo(coors.x, coors.y);
+			context.moveTo(coors.x, coors.y - canvasOffset.top);
 			this.isDrawing = true;
 		},
 		touchmove: function(coors){
 			if (this.isDrawing) {
-		        context.lineTo(coors.x, coors.y);
+				var canvasOffset = $('#sketchpad').offset();
+				context.lineTo(coors.x, coors.y - canvasOffset.top);
 		        context.stroke();
 			}
 		},
