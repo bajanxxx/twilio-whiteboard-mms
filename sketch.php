@@ -63,22 +63,22 @@
 					<table width=100%>
 					<tr>
 						<td>
-							<button type="button" id="small" class="sbbtn btn btn-default active" style="width:50px;">
+							<button type="button" id="small" class="sbbtn btn btn-default active" style="height:45px;width:50px;padding:5px;">
 								<i class="fa fa-circle"></i>
 							</button>
 						</td>
 						<td>
-							<button type="button" id="normal" class="sbbtn btn btn-default" style="width:50px;">
+							<button type="button" id="normal" class="sbbtn btn btn-default" style="width:50px;height:45px;padding:5px;">
 								<i class="fa fa-circle fa-lg"></i>
 							</button>
 						</td>
 						<td>
-							<button type="button" id="large" class="sbbtn btn btn-default" style="width:50px;">
+							<button type="button" id="large" class="sbbtn btn btn-default" style="width:50px;height:45px;padding:5px;">
 								<i class="fa fa-circle fa-2x"></i>
 							</button>
 						</td>
 						<td>
-							<button type="button" id="huge" class="sbbtn btn btn-default" style="width:50px;">
+							<button type="button" id="huge" class="sbbtn btn btn-default" style="width:50px;height:45px;padding:5px;">
 								<i class="fa fa-circle fa-3x"></i>
 							</button>
 						</td>
@@ -90,16 +90,16 @@
 					</tr>
 					<tr>
 						<td>
-							<button type="button" id="428ace" class="clrbtn btn blue-select" style="background:#428ace;width:50px;"><div><label></label></div></button>
+							<button type="button" id="428ace" class="clrbtn btn blue-select" style="padding:5px;background:#428ace;width:50px;"><div><label></label></div></button>
 						</td>
 						<td>
-							<button type="button" id="5cb65c" class="clrbtn btn green-select" style="background:#5cb65c;width:50px;"><div><label></label></div></button>
+							<button type="button" id="5cb65c" class="clrbtn btn green-select" style="padding:5px;background:#5cb65c;width:50px;"><div><label></label></div></button>
 						</td>
 						<td>
-							<button type="button" id="c60505" class="clrbtn btn red-select" style="background:#c60505;width:50px;"><div><label></label></div></button>
+							<button type="button" id="c60505" class="clrbtn btn red-select" style="padding:5px;background:#c60505;width:50px;"><div><label></label></div></button>
 						</td>
 						<td>
-							<button type="button" id="111111" class="clrbtn btn btn-primary active" style="background:#111111;;width:50px;"><div><label></label></div></button>
+							<button type="button" id="111111" class="clrbtn btn btn-primary active" style="padding:5px;background:#111111;;width:50px;"><div><label></label></div></button>
 						</td>
 					</tr>
 					<tr>
@@ -109,10 +109,14 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<button type="button" id="ffffff" class="clrbtn btn btn-default" style=""><i class="fa fa-eraser"></i></button>
+							<button type="button" id="ffffff" class="clrbtn btn btn-default"  style="padding:5px;">
+								<div><label><i class="fa fa-eraser"></i></label></div>
+							</button>
 						</td>
 						<td colspan="2" align=right>
-							<button class="clear-canvas btn btn-default">Clear</button>
+							<button class="clear-canvas btn btn-default"  style="padding:5px;">
+								<div><label>Clear</label></div>
+							</button>
 						</td>
 					</tr>
 					</table>
@@ -125,7 +129,7 @@
 						<table class="table-condensed" width=100%>
 						<tr>
 							<td colspan=3 nowrap=true>
-									<input type="tel" class="form-control input-md" id="PhoneNumber" placeholder="Number to message" style="width:98%;font-size:16px;">
+									<input type="tel" class="form-control input-md" id="PhoneNumber" placeholder="Number to message" style="width:98%;font-size:16px;" onfocus="blur()">
 <!--
 								<table>
 								<td>
@@ -140,54 +144,82 @@
 						</tr>
 						<tr>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="1" id="button1">1</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="1" id="button1" style="padding:5px;">
+									<div><label>1</label></div>
+								</button>
 							</td>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="2" id="button2">2</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="2" id="button2"  style="padding:5px;">
+									<div><label>2</label></div>
+								</button>
 							</td>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="3" id="button3">3</button>
-							</td>
-						</tr>
-						<tr>
-							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="4" id="button4">4</button>
-							</td>
-							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="5" id="button5">5</button>
-							</td>
-							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="6" id="button6">6</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="3" id="button3" style="padding:5px;">
+									<div><label>3</label></div>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="7" id="button7">7</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="4" id="button4" style="padding:5px;">
+									<div><label>4</label></div>
+								</button>
 							</td>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="8" id="button8">8</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="5" id="button5" style="padding:5px;">
+									<div><label>5</label></div>
+								</button>
 							</td>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="9" id="button9">9</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="6" id="button6" style="padding:5px;">
+									<div><label>6</label></div>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="*" id="buttonstar">*</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="7" id="button7" style="padding:5px;">
+									<div><label>7</label></div>
+								</button>
 							</td>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="0" id="button0">0</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="8" id="button8" style="padding:5px;">
+									<div><label>8</label></div>
+								</button>
 							</td>
 							<td width="33%" align=center>
-								<button type="button" class="numbtn btn btn-default btn-large"  value="#" id="buttonpound">#</button>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="9" id="button9" style="padding:5px;">
+									<div><label>9</label></div>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td width="33%" align=center>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="*" id="buttonstar" style="padding:5px;">
+									<div><label>*</label></div>
+								</button>
+							</td>
+							<td width="33%" align=center>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="0" id="button0" style="padding:5px;">
+									<div><label>0</label></div>
+								</button>
+							</td>
+							<td width="33%" align=center>
+								<button type="button" class="numbtn btn btn-default btn-large"  value="#" id="buttonpound" style="padding:5px;">
+									<div><label>#</label></div>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<td colspan=2>
-								<button type="button" class="btn btn-default bigbtn"  id="call" style="width:90%;">Send</button>
+								<button type="button" class="btn btn-default bigbtn"  id="call" style="width:90%;padding:5px;">
+									<div><label>Send</label></div>
+								</button>
 							</td>
 							<td width="33%" align=center>
-								<button type="button" class="btn btn-default mdbtn"  id="reset">X</button>
+								<button type="button" class="btn btn-default mdbtn"  id="reset"  style="padding:5px;">
+									<div><label>X</label></div>
+								</button>
 							</td>
 						</tr>
 						</table>

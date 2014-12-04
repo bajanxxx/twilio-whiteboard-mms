@@ -81,6 +81,7 @@ button.active{
 #dialpad button{
 	width: 45px;
 	margin: 2px;
+	padding:2px;
 }
 #dialpad button.bigbtn{
 	width: 100px;
@@ -133,7 +134,7 @@ button.active{
 }
 .fa-3x{
 	font-size: 30px;	
-	margin-top: -4px;
+	margin-top: -5px;
 }
 .fa-4x{
 	font-size: 34px;

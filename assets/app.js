@@ -19,7 +19,7 @@ window.addEventListener('load',function(){
 
 	var iWidth = canvas.width;
 	var iHeight = canvas.height;
-
+	
 	context.fillStyle = "rgb(255,255,255)";
 	context.fillRect(0,0,iWidth,iHeight);
 /*
@@ -41,13 +41,15 @@ window.addEventListener('load',function(){
 	var drawer = {
 		isDrawing: false,
 		touchstart: function(coors){
+			var canvasOffset = $('#sketchpad').offset();
 			context.beginPath();
-			context.moveTo(coors.x, coors.y);
+			context.moveTo(coors.x, coors.y - canvasOffset.top);
 			this.isDrawing = true;
 		},
 		touchmove: function(coors){
 			if (this.isDrawing) {
-		        context.lineTo(coors.x, coors.y);
+				var canvasOffset = $('#sketchpad').offset();
+				context.lineTo(coors.x, coors.y - canvasOffset.top);
 		        context.stroke();
 			}
 		},
@@ -78,9 +80,10 @@ window.addEventListener('load',function(){
     canvas.addEventListener('touchend',draw, false);
 //	mouse support
 	canvas.onmousedown = function(e) {
+		var canvasOffset = $('#sketchpad').offset();
 		bMouseIsDown = true;
-		iLastX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
-		iLastY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
+		iLastX = e.clientX - canvasOffset.left + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
+		iLastY = e.clientY - canvasOffset.top + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
 	}
 	canvas.onmouseup = function() {
 		bMouseIsDown = false;
@@ -88,9 +91,10 @@ window.addEventListener('load',function(){
 		iLastY = -1;
 	}
 	canvas.onmousemove = function(e) {
+		var canvasOffset = $('#sketchpad').offset();
 		if (bMouseIsDown) {
-			var iX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
-			var iY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
+			var iX = e.clientX - canvasOffset.left + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
+			var iY = e.clientY - canvasOffset.top + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
 			context.moveTo(iLastX, iLastY);
 			context.lineTo(iX, iY);
 			context.stroke();
